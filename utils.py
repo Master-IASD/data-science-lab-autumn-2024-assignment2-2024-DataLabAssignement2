@@ -15,7 +15,7 @@ def D_train(x, G, D, D_optimizer, criterion):
     D_real_loss = criterion(D_output, y_real)
     D_real_score = D_output
 
-    # train discriminator on facke
+    # train discriminator on fake
     z = torch.randn(x.shape[0], 100)
     x_fake, y_fake = G(z), torch.zeros(x.shape[0], 1)
 
